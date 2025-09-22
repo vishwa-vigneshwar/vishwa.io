@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamoDevStudio - Digital Agency | Web Design & Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="loading">
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-logo">
+            <i class="fas fa-bolt"></i> DynamoDevStudio
+        </div>
+        <div class="loader-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-target="50">0</span>+
+                <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="98">0</span>%
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="2.5">0</span>M+
+                <span class="stat-label">Revenue Generated</span>
+            </div>
+        </div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-bolt"></i> DynamoDevStudio
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#contact" class="btn-cta">Get Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Business Section -->
+    <section id="home" class="hero-business">
+        <div class="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Award Winning Digital Agency</div>
+            <div class="typing-effect" id="typewriter"></div>
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects Done</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollTo('services')">
+                    View Services <i class="fas fa-play"></i>
+                </button>
+                <button class="btn-secondary" onclick="scrollTo('portfolio')">
+                    See Portfolio <i class="fas fa-images"></i>
+                </button>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <i class="fab fa-clutch"></i>
+                    <span>Clutch Top Rated</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fab fa-upwork"></i>
+                    <span>Upwork Verified</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-award"></i>
+                    <span>2025 Excellence</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-mockup">
+            <div class="device-stack">
+                <div class="device laptop"></div>
+                <div class="device tablet"></div>
+                <div class="device phone"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Business -->
+    <section id="services" class="services-business">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Business Solutions That Scale</h2>
+                <p class="section-subtitle">From startups to enterprises, we build digital foundations that grow with you</p>
+            </div>
+            
+            <div class="services-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-tab="web">Web Development</button>
+                    <button class="tab-btn" data-tab="design">UI/UX Design</button>
+                    <button class="tab-btn" data-tab="mobile">Mobile Apps</button>
+                    <button class="tab-btn" data-tab="marketing">Digital Marketing</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="web">
+                        <div class="service-grid">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-code"></i></div>
+                                <h3>Custom Websites</h3>
+                                <p>React, Next.js, WordPress - SEO optimized, lightning fast</p>
+                                <div class="service-results">
+                                    <span class="result-badge">+45% Conversion</span>
+                                    <span class="result-badge">99.9% Uptime</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                                <h3>E-commerce</h3>
+                                <p>Shopify, WooCommerce, custom platforms with payment gateways</p>
+                                <div class="service-results">
+                                    <span class="result-badge">₹50L+ Revenue</span>
+                                    <span class="result-badge">30 Day Launch</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-database"></i></div>
+                                <h3>Backend Systems</h3>
+                                <p>Node.js, Python, database design, API development</p>
+                                <div class="service-results">
+                                    <span class="result-badge">500K+ Users</span>
+                                    <span class="result-badge">AWS Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="design">
+                        <div class="service-grid">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                                <h3>Brand Identity</h3>
+                                <p>Logo design, brand guidelines, visual identity systems</p>
+                                <div class="service-results">
+                                    <span class="result-badge">100+ Brands</span>
+                                    <span class="result-badge">Trademark Ready</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <h3>App Design</h3>
+                                <p>Figma prototypes, user flows, design systems</p>
+                                <div class="service-results">
+                                    <span class="result-badge">4.8 App Rating</span>
+                                    <span class="result-badge">Handoff Ready</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                                <h3>Conversion Design</h3>
+                                <p>A/B testing, heatmaps, CRO optimized interfaces</p>
+                                <div class="service-results">
+                                    <span class="result-badge">+67% CTR</span>
+                                    <span class="result-badge">Google Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="mobile">
+                        <div class="service-grid">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fab fa-react"></i></div>
+                                <h3>React Native Apps</h3>
+                                <p>Cross-platform mobile development with native performance</p>
+                                <div class="service-results">
+                                    <span class="result-badge">50K+ Downloads</span>
+                                    <span class="result-badge">4.8⭐ Rating</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <h3>Flutter Apps</h3>
+                                <p>Single codebase for iOS, Android, and web platforms</p>
+                                <div class="service-results">
+                                    <span class="result-badge">75% Faster</span>
+                                    <span class="result-badge">Native Feel</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                                <h3>App Maintenance</h3>
+                                <p>Updates, bug fixes, performance optimization</p>
+                                <div class="service-results">
+                                    <span class="result-badge">99% Uptime</span>
+                                    <span class="result-badge">24/7 Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="marketing">
+                        <div class="service-grid">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-search"></i></div>
+                                <h3>SEO Optimization</h3>
+                                <p>Technical SEO, content strategy, link building</p>
+                                <div class="service-results">
+                                    <span class="result-badge">+200% Traffic</span>
+                                    <span class="result-badge">Top 3 Rankings</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                                <h3>Social Media</h3>
+                                <p>Content creation, community management, ads</p>
+                                <div class="service-results">
+                                    <span class="result-badge">300K Followers</span>
+                                    <span class="result-badge">5x Engagement</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                                <h3>Performance Marketing</h3>
+                                <p>Google Ads, Facebook Ads, conversion optimization</p>
+                                <div class="service-results">
+                                    <span class="result-badge">4x ROAS</span>
+                                    <span class="result-badge">₹10L+ Revenue</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Case Studies -->
+    <section id="portfolio" class="portfolio-business">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Case Studies & Results</h2>
+                <p class="section-subtitle">Real businesses, real results, real revenue</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="saas">SaaS</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="portfolio-item ecommerce" data-modal="case1">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(45deg, #ff6b6b, #feca57);">
+                            <i class="fas fa-shopping-bag" style="font-size: 3em; color: white;"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Fashion Empire</h3>
+                                <p>E-commerce platform that generated ₹2.5Cr in first quarter</p>
+                                <div class="case-stats">
+                                    <div class="stat">+340% Sales</div>
+                                    <div class="stat">3x Faster Load</div>
+                                </div>
+                                <button class="btn-view-case">View Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item saas" data-modal="case2">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(45deg, #a8edea, #fed6e3);">
+                            <i class="fas fa-chart-line" style="font-size: 3em; color: #333;"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>SaaS Analytics</h3>
+                                <p>Real-time dashboard for 10K+ users, 99.9% uptime</p>
+                                <div class="case-stats">
+                                    <div class="stat">500K Sessions</div>
+                                    <div class="stat">AWS Scalable</div>
+                                </div>
+                                <button class="btn-view-case">View Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item mobile" data-modal="case3">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(45deg, #ffecd2, #fcb69f);">
+                            <i class="fas fa-mobile-alt" style="font-size: 3em; color: white;"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Fitness Tracker</h3>
+                                <p>React Native app with 50K downloads in 3 months</p>
+                                <div class="case-stats">
+                                    <div class="stat">4.8 Rating</div>
+                                    <div class="stat">₹15L Revenue</div>
+                                </div>
+                                <button class="btn-view-case">View Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item ecommerce" data-modal="case4">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder" style="background: linear-gradient(45deg, #a1c4fd, #c2e9fb);">
+                            <i class="fas fa-laptop-code" style="font-size: 3em; color: #333;"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Tech Startup</h3>
+                                <p>SaaS platform launch with 20K users in 60 days</p>
+                                <div class="case-stats">
+                                    <div class="stat">20K Users</div>
+                                    <div class="stat">₹8L MRR</div>
+                                </div>
+                                <button class="btn-view-case">View Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <h2 class="section-title">Trusted By Industry Leaders</h2>
+            <div class="clients-logos">
+                <div class="client-logo">
+                    <div class="logo-placeholder" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);">ACME</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder" style="background: linear-gradient(45deg, #4834d4, #686de0);">TechCorp</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder" style="background: linear-gradient(45deg, #f093fb, #f5576c);">FashionCo</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder" style="background: linear-gradient(45deg, #4facfe, #00f2fe);">StartUpX</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder" style="background: linear-gradient(45deg, #43e97b, #38f9d7);">GreenTech</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder" style="background: linear-gradient(45deg, #fa709a, #fee140);">StyleHub</div>
+                </div>
+            </div>
+            <div class="client-stats">
+                <div class="stat-group">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-group">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-label">Industries</div>
+                </div>
+                <div class="stat-group">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Business Impacted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Packages</h2>
+                <p class="section-subtitle">Transparent pricing, guaranteed results, flexible terms</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card starter">
+                    <div class="card-header">
+                        <h3>Starter</h3>
+                        <div class="price">₹25,000</div>
+                        <div class="period">/ project</div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> 5 Page Website</li>
+                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                        <li><i class="fas fa-check"></i> Basic SEO</li>
+                        <li><i class="fas fa-check"></i> 1 Month Support</li>
+                        <li class="upgrade"><i class="fas fa-arrow-up"></i> Upgrade Available</li>
+                    </ul>
+                    <button class="btn-select">Choose Starter</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="card-header">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">₹75,000</div>
+                        <div class="period">/ project</div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> 15 Page Website</li>
+                        <li><i class="fas fa-check"></i> E-commerce Ready</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                        <li><i class="fas fa-check"></i> 3 Month Support</li>
+                        <li><i class="fas fa-check"></i> Analytics Setup</li>
+                    </ul>
+                    <button class="btn-select">Choose Professional</button>
+                </div>
+                
+                <div class="pricing-card enterprise">
+                    <div class="card-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">₹2,50,000+</div>
+                        <div class="period">/ custom</div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Custom Solution</li>
+                        <li><i class="fas fa-check"></i> Full Stack Dev</li>
+                        <li><i class="fas fa-check"></i> Dedicated Team</li>
+                        <li><i class="fas fa-check"></i> 12 Month Support</li>
+                        <li><i class="fas fa-check"></i> White Label Option</li>
+                    </ul>
+                    <button class="btn-select">Contact Sales</button>
+                </div>
+            </div>
+            
+            <div class="pricing-cta">
+                <p>Not sure which package? <a href="#contact">Book a free consultation</a> and we'll find the perfect fit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-subtitle">Don't just take our word for it</p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <p>"DynamoDevStudio transformed our online presence. From a basic site to a revenue-generating machine. ROI in first month!"</p>
+                        <div class="testimonial-author">
+                            <div class="avatar-placeholder" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);"></div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <span>CEO, Fashion Collective</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"Technical excellence combined with business acumen. Our SaaS platform scaled to 10K users without a hitch."</p>
+                        <div class="testimonial-author">
+                            <div class="avatar-placeholder" style="background: linear-gradient(45deg, #4834d4, #686de0);"></div>
+                            <div class="author-info">
+                                <h4>Rahul Mehta</h4>
+                                <span>CTO, AnalyticsPro</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"The mobile app they built for us hit 50K downloads in 90 days. Best investment we've made this year."</p>
+                        <div class="testimonial-author">
+                            <div class="avatar-placeholder" style="background: linear-gradient(45deg, #4facfe, #00f2fe);"></div>
+                            <div class="author-info">
+                                <h4>Anita Desai</h4>
+                                <span>Founder, FitLife</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Team -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose DynamoDevStudio?</h2>
+                    <p>We're not just developers, we're business growth partners. Every line of code we write has one goal: your revenue.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <h4>ROI Focused</h4>
+                            <p>Every project measured by business impact, not just aesthetics</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Client First</h4>
+                            <p>Your success is our success. We only win when you win.</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>On Time, On Budget</h4>
+                            <p>97% of projects delivered ahead of schedule</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Guaranteed Results</h4>
+                            <p>Performance guarantees or we work for free</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="#contact" class="btn-primary">Start Your Project</a>
+                        <a href="#" class="btn-secondary">View Our Process</a>
+                    </div>
+                </div>
+                
+                <div class="team-section">
+                    <h3>Meet the Team</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="team-photo-placeholder" style="background: linear-gradient(45deg, #667eea, #764ba2);"></div>
+                            <div class="team-info">
+                                <h4>Karthik S</h4>
+                                <span>Founder & Lead Developer</span>
+                                <p>5+ years building digital products that scale. Full-stack expert with passion for business growth.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Business -->
+    <section id="contact" class="contact-business">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ready to Transform Your Business?</h2>
+                <p class="section-subtitle">Let's discuss how we can drive revenue growth through smart digital solutions</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get Your Free Quote</h3>
+                    <p>Complete the form below and we'll respond within 24 hours with a custom proposal</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <a href="tel:+919876543210">+91 98765 43210</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:hello@dynamodevstudio.com">hello@dynamodevstudio.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/919876543210" target="_blank">Quick Chat</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-widget">
+                        <a href="https://calendly.com" class="btn-primary" target="_blank">
+                            <i class="fas fa-calendar-alt"></i> Book Free Consultation
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="businessForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Business Name" required>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Business Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="web">Website Development</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="mobile">Mobile App</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="marketing">Digital Marketing</option>
+                        </select>
+                        <input type="text" placeholder="Budget Range (₹)">
+                    </div>
+                    <textarea placeholder="Tell us about your project goals and challenges" rows="5" required></textarea>
+                    <div class="form-footer">
+                        <label>
+                            <input type="checkbox" required>
+                            <span>I agree to the <a href="#" target="_blank">Terms & Privacy Policy</a></span>
+                        </label>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Business Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Business -->
+    <footer class="footer-business">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i> DynamoDevStudio
+                    </div>
+                    <p>Transforming businesses through innovative digital solutions</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">E-commerce Solutions</a></li>
+                        <li><a href="#services">Mobile Applications</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#portfolio">Case Studies</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Chennai, India</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bangalore, India</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Remote Global</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DynamoDevStudio. All rights reserved. | GST: 33ABCDE1234F1Z5</p>
+                <div class="footer-certifications">
+                    <div class="cert-badge" style="background: #00ff88;">SSL</div>
+                    <div class="cert-badge" style="background: #4facfe;">PCI</div>
+                    <div class="cert-badge" style="background: #ff6b6b;">Google</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modal -->
+    <div id="caseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="case-study-content">
+                <!-- Dynamic content loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
