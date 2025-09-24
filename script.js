@@ -86,7 +86,6 @@ tabButtons.forEach(button => {
 
 // Adjust layout on resize
 window.addEventListener('resize', () => {
-    // Ensure nav menu is hidden on mobile after resize
     if (window.innerWidth > 576) {
         navMenu.classList.remove('active');
     }
