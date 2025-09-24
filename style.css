@@ -9,14 +9,15 @@ body {
     background: #f5f7fa;
     color: #333;
     overflow-x: hidden;
-    font-size: 16px; /* Base font size for scalability */
+    font-size: clamp(14px, 2.5vw, 16px); /* Scalable base font */
+    line-height: 1.5;
 }
 
 .container {
-    max-width: 100%;
-    width: 90%;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 clamp(10px, 5vw, 20px);
 }
 
 /* Loading Screen */
@@ -36,36 +37,36 @@ body {
 
 .loader-logo {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 4vw, 20px);
 }
 
 .loader-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(15px, 4vw, 20px);
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 4vw, 20px);
 }
 
 .stat-item {
     text-align: center;
     color: #fff;
-    min-width: 100px;
+    min-width: clamp(80px, 25vw, 100px);
 }
 
 .stat-number {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     font-weight: 700;
 }
 
 .stat-label {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
 
 .loader-bar {
-    width: clamp(150px, 50%, 200px);
+    width: clamp(120px, 40vw, 200px);
     height: 4px;
     background: rgba(255, 255, 255, 0.3);
     position: relative;
@@ -93,30 +94,35 @@ body {
     width: 100%;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
+    padding: clamp(10px, 3vw, 15px) 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .nav-brand {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     color: #4AC8F4;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: clamp(15px, 3vw, 20px);
+    gap: clamp(10px, 3vw, 20px);
 }
 
 .nav-menu li a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #4AC8F4;
 }
 
 .nav-cta .btn-cta {
@@ -125,13 +131,19 @@ body {
     padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
     border-radius: 5px;
     text-decoration: none;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    transition: background 0.3s;
+}
+
+.nav-cta .btn-cta:hover {
+    background: #007ACC;
 }
 
 .hamburger {
     display: none;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     cursor: pointer;
+    color: #333;
 }
 
 /* Hero Section */
@@ -143,7 +155,7 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, #4AC8F4 0%, #007ACC 100%);
     position: relative;
-    padding: 80px 0;
+    padding: clamp(60px, 15vw, 100px) 0;
 }
 
 .particles-js {
@@ -153,74 +165,81 @@ body {
     width: 100%;
     height: 100%;
     background: url('https://via.placeholder.com/1920x1080?text=Particles');
+    background-size: cover;
     opacity: 0.3;
 }
 
 .hero-content {
     width: 100%;
-    max-width: 600px;
+    max-width: clamp(300px, 90%, 600px);
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: clamp(15px, 5vw, 20px);
 }
 
 .hero-badge {
     background: #fff;
     color: #4AC8F4;
-    padding: 5px 15px;
+    padding: clamp(5px, 2vw, 8px) clamp(10px, 3vw, 15px);
     border-radius: 20px;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 4vw, 20px);
 }
 
 .typing-effect {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(1.8rem, 6vw, 3rem);
-    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 6vw, 2.8rem);
+    margin-bottom: clamp(15px, 4vw, 20px);
+    line-height: 1.2;
 }
 
 .hero-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(15px, 4vw, 20px);
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 4vw, 20px);
 }
 
 .stat-box {
     text-align: center;
-    min-width: 100px;
+    min-width: clamp(80px, 25vw, 100px);
 }
 
 .stat-number {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     font-weight: 700;
 }
 
 .stat-label {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: clamp(10px, 3vw, 15px);
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 4vw, 20px);
 }
 
 .btn-primary, .btn-secondary {
-    padding: clamp(10px, 2.5vw, 12px) clamp(20px, 4vw, 24px);
+    padding: clamp(8px, 2.5vw, 12px) clamp(15px, 4vw, 24px);
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    transition: background 0.3s, border 0.3s;
 }
 
 .btn-primary {
     background: #fff;
     color: #4AC8F4;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
 }
 
 .btn-secondary {
@@ -229,10 +248,15 @@ body {
     color: #fff;
 }
 
+.btn-secondary:hover {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
 .hero-trust {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: clamp(10px, 3vw, 15px);
     justify-content: center;
 }
 
@@ -241,19 +265,19 @@ body {
     align-items: center;
     gap: 10px;
     color: #fff;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
 
 .hero-mockup {
     width: 100%;
-    max-width: 600px;
-    padding: 20px;
+    max-width: clamp(300px, 90%, 600px);
+    padding: clamp(15px, 5vw, 20px);
 }
 
 .device-stack {
     position: relative;
     width: 100%;
-    height: clamp(200px, 50vw, 400px);
+    height: clamp(150px, 50vw, 400px);
 }
 
 .device {
@@ -273,17 +297,17 @@ body {
 
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: clamp(20px, 6vw, 40px);
 }
 
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: clamp(8px, 2vw, 10px);
 }
 
 .section-subtitle {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
     color: #666;
 }
 
@@ -291,8 +315,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
+    gap: clamp(10px, 3vw, 15px);
+    margin-bottom: clamp(20px, 6vw, 40px);
 }
 
 .tab-btn {
@@ -302,11 +326,17 @@ body {
     cursor: pointer;
     font-weight: 600;
     border-radius: 5px;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    transition: background 0.3s, color 0.3s;
 }
 
 .tab-btn.active {
     background: #4AC8F4;
+    color: #fff;
+}
+
+.tab-btn:hover {
+    background: #007ACC;
     color: #fff;
 }
 
@@ -320,38 +350,52 @@ body {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 30vw, 250px), 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 30vw, 250px), 1fr));
+    gap: clamp(15px, 4vw, 20px);
 }
 
 .service-item {
     background: #fff;
-    padding: 20px;
+    padding: clamp(15px, 4vw, 20px);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
 }
 
 .service-icon {
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: #4AC8F4;
-    margin-bottom: 10px;
+    margin-bottom: clamp(8px, 2vw, 10px);
+}
+
+.service-item h3 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: clamp(8px, 2vw, 10px);
+}
+
+.service-item p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 
 .service-results {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: clamp(8px, 2vw, 10px);
+    margin-top: clamp(8px, 2vw, 10px);
 }
 
 .result-badge {
     background: #4AC8F4;
     color: #fff;
-    padding: 5px 10px;
+    padding: clamp(4px, 1.5vw, 5px) clamp(8px, 2vw, 10px);
     border-radius: 20px;
-    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
 }
 
 /* Portfolio Section */
@@ -362,8 +406,8 @@ body {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 40vw, 300px), 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 40vw, 300px), 1fr));
+    gap: clamp(15px, 4vw, 20px);
 }
 
 .portfolio-item {
@@ -376,6 +420,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 4/3; /* Maintain consistent image ratio */
 }
 
 .portfolio-overlay {
@@ -398,11 +443,19 @@ body {
     opacity: 1;
 }
 
+.portfolio-overlay h3 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.portfolio-overlay p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
 .portfolio-link {
     color: #4AC8F4;
     text-decoration: none;
     font-weight: 600;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 /* About Section */
@@ -413,7 +466,7 @@ body {
 .about-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(15px, 4vw, 20px);
     align-items: center;
 }
 
@@ -428,12 +481,21 @@ body {
     text-align: center;
 }
 
+.about-text h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: clamp(8px, 2vw, 10px);
+}
+
+.about-text p {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
 .about-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(15px, 4vw, 20px);
     justify-content: center;
-    margin: 20px 0;
+    margin: clamp(15px, 4vw, 20px) 0;
 }
 
 /* Pricing Section */
@@ -444,37 +506,46 @@ body {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 30vw, 250px), 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 30vw, 250px), 1fr));
+    gap: clamp(15px, 4vw, 20px);
 }
 
 .pricing-card {
     background: #fff;
-    padding: 20px;
+    padding: clamp(15px, 4vw, 20px);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
 }
 
 .pricing-card.highlight {
     border: 2px solid #4AC8F4;
 }
 
+.pricing-card h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
 .price {
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
     color: #4AC8F4;
-    margin: 10px 0;
+    margin: clamp(8px, 2vw, 10px) 0;
 }
 
 .pricing-card ul {
     list-style: none;
-    margin: 20px 0;
+    margin: clamp(15px, 4vw, 20px) 0;
 }
 
 .pricing-card ul li {
-    margin: 10px 0;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    margin: clamp(8px, 2vw, 10px) 0;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 
 /* Contact Section */
@@ -485,45 +556,65 @@ body {
 .contact-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(15px, 4vw, 20px);
 }
 
 .contact-info, .contact-form {
     flex: 1;
 }
 
+.contact-info h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: clamp(8px, 2vw, 10px);
+}
+
 .contact-info p {
-    margin: 10px 0;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    margin: clamp(8px, 2vw, 10px) 0;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 .contact-info a {
     color: #4AC8F4;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #007ACC;
 }
 
 .social-links {
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    gap: clamp(15px, 4vw, 20px);
+    margin-top: clamp(15px, 4vw, 20px);
 }
 
 .social-links a {
     color: #4AC8F4;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007ACC;
+}
+
+.contact-form h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: clamp(8px, 2vw, 10px);
 }
 
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: clamp(8px, 2vw, 10px);
+    margin: clamp(8px, 2vw, 10px) 0;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: clamp(100px, 30vw, 150px);
 }
 
 .contact-form button {
@@ -532,7 +623,7 @@ body {
 
 /* Footer */
 .footer-business {
-    padding: 20px 0;
+    padding: clamp(15px, 4vw, 20px) 0;
     background: #333;
     color: #fff;
     text-align: center;
@@ -542,24 +633,39 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: clamp(10px, 3vw, 15px);
+    margin-top: clamp(8px, 2vw, 10px);
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #4AC8F4;
 }
 
 /* Responsive Design */
+@media (min-width: 576px) {
+    .hero-content, .hero-mockup {
+        max-width: 50%;
+    }
+
+    .hero-stats, .hero-trust, .category-tabs, .about-stats {
+        gap: clamp(15px, 3vw, 20px);
+    }
+}
+
 @media (min-width: 768px) {
     .container {
-        width: 85%;
+        max-width: 85%;
     }
 
     .navbar {
-        padding: 20px 0;
+        padding: clamp(15px, 3vw, 20px) 0;
     }
 
     .nav-menu {
@@ -573,12 +679,12 @@ body {
     .hero-business {
         flex-direction: row;
         align-items: center;
-        padding: 100px 0;
+        padding: clamp(80px, 15vw, 120px) 0;
     }
 
     .hero-content {
-        max-width: 50%;
         text-align: left;
+        max-width: 50%;
     }
 
     .hero-mockup {
@@ -593,23 +699,27 @@ body {
     .about-text {
         text-align: left;
     }
+
+    .device.laptop { width: clamp(200px, 40vw, 350px); height: clamp(120px, 24vw, 210px); }
+    .device.tablet { width: clamp(100px, 20vw, 175px); height: clamp(140px, 28vw, 245px); }
+    .device.phone { width: clamp(50px, 10vw, 87.5px); height: clamp(100px, 20vw, 175px); }
 }
 
 @media (min-width: 1200px) {
     .container {
-        width: 80%;
+        max-width: 80%;
     }
 
     .hero-content {
-        max-width: 40%;
+        max-width: 45%;
     }
 
     .hero-mockup {
-        max-width: 40%;
+        max-width: 45%;
     }
 
-    .device.laptop { width: 400px; height: 250px; }
-    .device.tablet { width: 200px; height: 300px; }
+    .device.laptop { width: 400px; height: 240px; }
+    .device.tablet { width: 200px; height: 280px; }
     .device.phone { width: 100px; height: 200px; }
 }
 
@@ -619,19 +729,20 @@ body {
     }
 
     .typing-effect {
-        font-size: clamp(1.5rem, 5vw, 2rem);
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
     }
 
     .nav-menu {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: #fff;
-        padding: 20px;
+        padding: clamp(15px, 4vw, 20px);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -640,5 +751,19 @@ body {
 
     .hamburger {
         display: block;
+    }
+
+    .nav-cta {
+        display: none; /* Hide CTA on mobile to save space */
+    }
+}
+
+@media (max-width: 400px) {
+    .service-grid, .pricing-grid, .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .hero-stats, .hero-trust, .category-tabs {
+        gap: 10px;
     }
 }
