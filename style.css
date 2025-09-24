@@ -9,12 +9,14 @@ body {
     background: #f5f7fa;
     color: #333;
     overflow-x: hidden;
+    font-size: 16px; /* Base font size for scalability */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
+    width: 90%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 /* Loading Screen */
@@ -34,33 +36,36 @@ body {
 
 .loader-logo {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: #fff;
     margin-bottom: 20px;
 }
 
 .loader-stats {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 .stat-item {
     text-align: center;
     color: #fff;
+    min-width: 100px;
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .loader-bar {
-    width: 200px;
+    width: clamp(150px, 50%, 200px);
     height: 4px;
     background: rgba(255, 255, 255, 0.3);
     position: relative;
@@ -90,37 +95,42 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-brand {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
     color: #4AC8F4;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: clamp(15px, 3vw, 20px);
 }
 
 .nav-menu li a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .nav-cta .btn-cta {
     background: #4AC8F4;
     color: #fff;
-    padding: 10px 20px;
+    padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
     border-radius: 5px;
     text-decoration: none;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .hamburger {
     display: none;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     cursor: pointer;
 }
 
@@ -128,10 +138,12 @@ body {
 .hero-business {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #4AC8F4 0%, #007ACC 100%);
     position: relative;
+    padding: 80px 0;
 }
 
 .particles-js {
@@ -145,8 +157,11 @@ body {
 }
 
 .hero-content {
-    max-width: 50%;
+    width: 100%;
+    max-width: 600px;
     color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
 .hero-badge {
@@ -154,47 +169,53 @@ body {
     color: #4AC8F4;
     padding: 5px 15px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     display: inline-block;
     margin-bottom: 20px;
 }
 
 .typing-effect {
     font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 6vw, 3rem);
     margin-bottom: 20px;
 }
 
 .hero-stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 .stat-box {
     text-align: center;
+    min-width: 100px;
 }
 
 .stat-number {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 .btn-primary, .btn-secondary {
-    padding: 12px 24px;
+    padding: clamp(10px, 2.5vw, 12px) clamp(20px, 4vw, 24px);
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .btn-primary {
@@ -210,7 +231,9 @@ body {
 
 .hero-trust {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
 .trust-item {
@@ -218,16 +241,19 @@ body {
     align-items: center;
     gap: 10px;
     color: #fff;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .hero-mockup {
-    max-width: 50%;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
 }
 
 .device-stack {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: clamp(200px, 50vw, 400px);
 }
 
 .device {
@@ -236,13 +262,13 @@ body {
     background-size: cover;
 }
 
-.device.laptop { width: 400px; height: 250px; top: 0; left: 0; }
-.device.tablet { width: 200px; height: 300px; top: 50px; left: 300px; }
-.device.phone { width: 100px; height: 200px; top: 100px; left: 400px; }
+.device.laptop { width: 60%; height: 60%; top: 0; left: 0; }
+.device.tablet { width: 30%; height: 70%; top: 10%; left: 50%; }
+.device.phone { width: 15%; height: 50%; top: 20%; left: 70%; }
 
 /* Services Section */
 .services-business {
-    padding: 80px 0;
+    padding: clamp(40px, 10vw, 80px) 0;
 }
 
 .section-header {
@@ -252,29 +278,31 @@ body {
 
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin-bottom: 10px;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     color: #666;
 }
 
 .category-tabs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 40px;
 }
 
 .tab-btn {
-    padding: 10px 20px;
+    padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
     border: none;
     background: #f0f0f0;
     cursor: pointer;
     font-weight: 600;
     border-radius: 5px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .tab-btn.active {
@@ -292,7 +320,7 @@ body {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 30vw, 250px), 1fr));
     gap: 20px;
 }
 
@@ -305,13 +333,14 @@ body {
 }
 
 .service-icon {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     color: #4AC8F4;
     margin-bottom: 10px;
 }
 
 .service-results {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
@@ -322,18 +351,18 @@ body {
     color: #fff;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
 }
 
 /* Portfolio Section */
 .portfolio-business {
-    padding: 80px 0;
+    padding: clamp(40px, 10vw, 80px) 0;
     background: #fff;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 40vw, 300px), 1fr));
     gap: 20px;
 }
 
@@ -373,43 +402,49 @@ body {
     color: #4AC8F4;
     text-decoration: none;
     font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 /* About Section */
 .about-business {
-    padding: 80px 0;
+    padding: clamp(40px, 10vw, 80px) 0;
 }
 
 .about-content {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 300px;
+    max-width: clamp(200px, 50vw, 300px);
     border-radius: 10px;
 }
 
 .about-text {
     flex: 1;
+    text-align: center;
 }
 
 .about-stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     margin: 20px 0;
 }
 
 /* Pricing Section */
 .pricing-business {
-    padding: 80px 0;
+    padding: clamp(40px, 10vw, 80px) 0;
     background: #f5f7fa;
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 30vw, 250px), 1fr));
     gap: 20px;
 }
 
@@ -426,7 +461,7 @@ body {
 }
 
 .price {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
     color: #4AC8F4;
     margin: 10px 0;
@@ -439,16 +474,18 @@ body {
 
 .pricing-card ul li {
     margin: 10px 0;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 /* Contact Section */
 .contact-business {
-    padding: 80px 0;
+    padding: clamp(40px, 10vw, 80px) 0;
 }
 
 .contact-content {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-info, .contact-form {
@@ -457,6 +494,7 @@ body {
 
 .contact-info p {
     margin: 10px 0;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .contact-info a {
@@ -472,7 +510,7 @@ body {
 
 .social-links a {
     color: #4AC8F4;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .contact-form input, .contact-form textarea {
@@ -481,6 +519,7 @@ body {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .contact-form textarea {
@@ -501,22 +540,86 @@ body {
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 10px;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+    }
+
     .navbar {
-        display: flex;
-        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    .nav-menu {
+        display: flex !important;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hero-business {
+        flex-direction: row;
         align-items: center;
+        padding: 100px 0;
+    }
+
+    .hero-content {
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .hero-mockup {
+        max-width: 50%;
+    }
+
+    .about-content, .contact-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+
+    .hero-content {
+        max-width: 40%;
+    }
+
+    .hero-mockup {
+        max-width: 40%;
+    }
+
+    .device.laptop { width: 400px; height: 250px; }
+    .device.tablet { width: 200px; height: 300px; }
+    .device.phone { width: 100px; height: 200px; }
+}
+
+@media (max-width: 576px) {
+    .hero-content, .hero-mockup {
+        max-width: 100%;
+    }
+
+    .typing-effect {
+        font-size: clamp(1.5rem, 5vw, 2rem);
     }
 
     .nav-menu {
@@ -528,6 +631,7 @@ body {
         width: 100%;
         background: #fff;
         padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu.active {
@@ -536,18 +640,5 @@ body {
 
     .hamburger {
         display: block;
-    }
-
-    .hero-business {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content, .hero-mockup {
-        max-width: 100%;
-    }
-
-    .about-content, .contact-content {
-        flex-direction: column;
     }
 }
