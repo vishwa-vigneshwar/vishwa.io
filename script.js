@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         const updateCount = () => {
             if (count < target) {
                 count += increment;
-                stat.textContent = Math.round(count);
+                stat.textContent = Math.round(count * 10) / 10;
                 setTimeout(updateCount, 20);
             } else {
                 stat.textContent = target;
@@ -82,4 +82,12 @@ tabButtons.forEach(button => {
         tabPanes.forEach(pane => pane.classList.remove('active'));
         document.querySelector(`#${button.getAttribute('data-tab')}`).classList.add('active');
     });
+});
+
+// Adjust layout on resize
+window.addEventListener('resize', () => {
+    // Ensure nav menu is hidden on mobile after resize
+    if (window.innerWidth > 576) {
+        navMenu.classList.remove('active');
+    }
 });
