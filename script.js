@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         document.querySelector('#loader').style.display = 'none';
         document.body.classList.remove('loading');
-    }, 2000);
+    }, 2500);
 
     // Animate stats
     const stats = document.querySelectorAll('.stat-number');
@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
             if (count < target) {
                 count += increment;
                 stat.textContent = Math.round(count * 10) / 10;
-                setTimeout(updateCount, 20);
+                setTimeout(updateCount, 25);
             } else {
                 stat.textContent = target;
             }
@@ -40,7 +40,7 @@ function scrollTo(sectionId) {
 // Typing Effect
 const texts = [
     'Transform Your Business with Vishwa Creations',
-    'Crafting Digital Success for Tamil Nadu & Beyond',
+    'Crafting Digital Success in Tamil Nadu & Beyond',
     'Web Development, UI/UX, Apps by Vigneshwar S'
 ];
 let index = 0;
