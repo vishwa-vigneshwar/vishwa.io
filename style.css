@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f7fa;
-    color: #333;
+    background: #0a0a1e; /* Dark Kali background */
+    color: #fff;
     overflow-x: hidden;
     font-size: clamp(14px, 2.5vw, 16px);
     line-height: 1.5;
@@ -59,14 +59,9 @@ body {
 }
 
 @keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(74, 200, 244, 0.5); }
-    50% { box-shadow: 0 0 15px rgba(74, 200, 244, 0.8); }
-    100% { box-shadow: 0 0 5px rgba(74, 200, 244, 0.5); }
-}
-
-@keyframes imageZoom {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+    0% { box-shadow: 0 0 5px rgba(0, 136, 255, 0.5); } /* Kali blue glow */
+    50% { box-shadow: 0 0 15px rgba(0, 136, 255, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(0, 136, 255, 0.5); }
 }
 
 /* Reduced Motion Fallback */
@@ -77,14 +72,14 @@ body {
     }
 }
 
-/* Loading Screen */
+/* Loading Screen - Kali Style */
 #loader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #4AC8F4;
+    background: linear-gradient(135deg, #001a33, #000); /* Kali dark blue-black */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,10 +89,6 @@ body {
     will-change: opacity;
 }
 
-@keyframes fadeOut {
-    to { opacity: 0; visibility: hidden; }
-}
-
 .loader-logo {
     font-family: 'Orbitron', sans-serif;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
@@ -105,6 +96,18 @@ body {
     margin-bottom: clamp(15px, 4vw, 20px);
     animation: scaleUp 1s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kali-dragon {
+    width: 50px;
+    height: 50px;
+    fill: none;
+    stroke: #fff; /* White Kali dragon */
+    stroke-width: 2;
+    animation: pulse 2s infinite;
 }
 
 .loader-stats {
@@ -157,13 +160,13 @@ body {
     100% { left: 100%; }
 }
 
-/* Navigation */
+/* Navigation - Kali Style */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #0a0a1e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     padding: clamp(10px, 3vw, 15px) 0;
     z-index: 1000;
     display: flex;
@@ -176,8 +179,11 @@ body {
 .nav-brand {
     font-family: 'Orbitron', sans-serif;
     font-size: clamp(1.2rem, 4vw, 1.8rem);
-    color: #4AC8F4;
+    color: #fff;
     animation: fadeIn 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-menu {
@@ -198,30 +204,30 @@ body {
 
 .nav-menu li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 600;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .nav-menu li a:hover {
-    color: #4AC8F4;
+    color: #ff0000; /* Red accent from Kali wallpaper */
     transform: scale(1.1);
 }
 
 .nav-cta .btn-cta {
-    background: #4AC8F4;
+    background: #ff0000; /* Red Kali accent */
     color: #fff;
     padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
     border-radius: 5px;
     text-decoration: none;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: pulse 2s infinite;
     will-change: transform;
 }
 
 .nav-cta .btn-cta:hover {
-    background: #007ACC;
+    background: #cc0000;
     animation: none;
     transform: scale(1.05);
 }
@@ -230,7 +236,7 @@ body {
     display: none;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     cursor: pointer;
-    color: #333;
+    color: #fff;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -241,7 +247,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #4AC8F4 0%, #007ACC 100%);
+    background: linear-gradient(135deg, #0a0a1e 0%, #001a33 100%); /* Kali dark theme */
     position: relative;
     padding: clamp(60px, 15vw, 100px) 0;
 }
@@ -252,11 +258,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    background: url('https://yourusername.github.io/vishwa-creations/images/kali-wallpaper.webp'); /* Kali wallpaper as background */
     background-size: cover;
-    background-position: center;
-    opacity: 0.4;
+    opacity: 0.3;
     animation: fadeIn 1.2s ease-in-out;
-    will-change: opacity;
 }
 
 .hero-content {
@@ -270,8 +275,8 @@ body {
 }
 
 .hero-badge {
-    background: #fff;
-    color: #4AC8F4;
+    background: #ff0000; /* Red Kali accent */
+    color: #fff;
     padding: clamp(5px, 2vw, 8px) clamp(10px, 3vw, 15px);
     border-radius: 20px;
     font-size: clamp(0.7rem, 2vw, 0.9rem);
@@ -286,6 +291,19 @@ body {
     margin-bottom: clamp(15px, 4vw, 20px);
     line-height: 1.2;
     animation: fadeIn 1s ease-in-out 0.6s;
+}
+
+.ascii-art {
+    font-family: monospace;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    color: #ff0000; /* Red ASCII art from wallpaper */
+    text-align: left;
+    white-space: pre;
+    background: rgba(0, 0, 0, 0.5);
+    padding: clamp(10px, 3vw, 15px);
+    border-radius: 10px;
+    margin: clamp(15px, 4vw, 20px) 0;
+    animation: fadeIn 1s ease-in-out 0.9s;
 }
 
 .hero-stats {
@@ -309,6 +327,7 @@ body {
 .stat-number {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
     font-weight: 700;
+    color: #ff0000; /* Red accent */
 }
 
 .stat-label {
@@ -334,9 +353,9 @@ body {
 }
 
 .btn-primary {
-    background: #fff;
-    color: #4AC8F4;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    background: #ff0000;
+    color: #fff;
+    animation: pulse 2s infinite;
 }
 
 .btn-primary:hover {
@@ -346,14 +365,14 @@ body {
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.5s;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    animation: pulse 2s infinite 0.5s;
 }
 
 .btn-secondary:hover {
-    border-color: #f0f0f0;
-    color: #f0f0f0;
+    border-color: #cc0000;
+    color: #cc0000;
     animation: none;
     transform: scale(1.05);
 }
@@ -392,16 +411,10 @@ body {
 
 .device {
     position: absolute;
+    background: url('https://via.placeholder.com/300x200?text=Device');
     background-size: cover;
-    background-position: center;
-    animation: rotate3D 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: rotate3D 6s infinite;
     will-change: transform;
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-}
-
-.device:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(74, 200, 244, 0.8);
 }
 
 .device.laptop { width: 60%; height: 60%; top: 0; left: 0; animation-delay: 0s; }
@@ -411,6 +424,7 @@ body {
 /* Services Section */
 .services-business {
     padding: clamp(40px, 10vw, 80px) 0;
+    background: linear-gradient(135deg, #0a0a1e 0%, #001a33 100%);
 }
 
 .section-header {
@@ -423,11 +437,12 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: clamp(8px, 2vw, 10px);
+    color: #ff0000; /* Red accent */
 }
 
 .section-subtitle {
     font-size: clamp(0.8rem, 2.5vw, 1.1rem);
-    color: #666;
+    color: #ddd;
 }
 
 .category-tabs {
@@ -441,7 +456,7 @@ body {
 .tab-btn {
     padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
     border: none;
-    background: #f0f0f0;
+    background: #1a1a33;
     cursor: pointer;
     font-weight: 600;
     border-radius: 5px;
@@ -449,6 +464,7 @@ body {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
     animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
+    color: #fff;
 }
 
 .tab-btn:nth-child(2) { animation-delay: 0.3s; }
@@ -456,12 +472,12 @@ body {
 .tab-btn:nth-child(4) { animation-delay: 0.9s; }
 
 .tab-btn.active {
-    background: #4AC8F4;
+    background: #ff0000;
     color: #fff;
 }
 
 .tab-btn:hover {
-    background: #007ACC;
+    background: #cc0000;
     color: #fff;
     transform: scale(1.05);
 }
@@ -481,11 +497,11 @@ body {
 }
 
 .service-item {
-    background: #fff;
+    background: #1a1a33;
     padding: clamp(15px, 4vw, 20px);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
@@ -500,18 +516,20 @@ body {
 
 .service-item .service-icon {
     font-size: clamp(1.5rem, 4vw, 2rem);
-    color: #4AC8F4;
+    color: #ff0000; /* Red icon */
     margin-bottom: clamp(8px, 2vw, 10px);
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: pulse 2s infinite;
 }
 
 .service-item h3 {
     font-size: clamp(1rem, 3vw, 1.2rem);
     margin-bottom: clamp(8px, 2vw, 10px);
+    color: #fff;
 }
 
 .service-item p {
     font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    color: #ddd;
 }
 
 .service-results {
@@ -523,12 +541,12 @@ body {
 }
 
 .result-badge {
-    background: #4AC8F4;
+    background: #ff0000;
     color: #fff;
     padding: clamp(4px, 1.5vw, 5px) clamp(8px, 2vw, 10px);
     border-radius: 20px;
     font-size: clamp(0.6rem, 2vw, 0.8rem);
-    animation: bounce 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: bounce 2s infinite;
 }
 
 .result-badge:nth-child(2) { animation-delay: 0.3s; }
@@ -536,7 +554,7 @@ body {
 /* Portfolio Section */
 .portfolio-business {
     padding: clamp(40px, 10vw, 80px) 0;
-    background: #fff;
+    background: #0a0a1e;
 }
 
 .portfolio-grid {
@@ -561,12 +579,11 @@ body {
     height: auto;
     display: block;
     aspect-ratio: 4/3;
-    object-fit: cover;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover img {
-    animation: imageZoom 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform: scale(1.1);
 }
 
 .portfolio-overlay {
@@ -601,11 +618,11 @@ body {
 }
 
 .portfolio-link {
-    color: #4AC8F4;
+    color: #ff0000;
     text-decoration: none;
     font-weight: 600;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
-    animation: bounce 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: bounce 2s infinite;
 }
 
 .portfolio-link:hover {
@@ -615,6 +632,7 @@ body {
 /* About Section */
 .about-business {
     padding: clamp(40px, 10vw, 80px) 0;
+    background: linear-gradient(135deg, #0a0a1e 0%, #001a33 100%);
 }
 
 .about-content {
@@ -630,13 +648,12 @@ body {
     border-radius: 10px;
     animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
     transform: rotate(2deg);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     will-change: transform;
 }
 
 .about-image img:hover {
     transform: rotate(0);
-    box-shadow: 0 0 15px rgba(74, 200, 244, 0.8);
 }
 
 .about-text {
@@ -649,10 +666,12 @@ body {
 .about-text h3 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: clamp(8px, 2vw, 10px);
+    color: #ff0000;
 }
 
 .about-text p {
     font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    color: #ddd;
 }
 
 .about-stats {
@@ -674,7 +693,7 @@ body {
 /* Pricing Section */
 .pricing-business {
     padding: clamp(40px, 10vw, 80px) 0;
-    background: #f5f7fa;
+    background: #0a0a1e;
 }
 
 .pricing-grid {
@@ -684,11 +703,11 @@ body {
 }
 
 .pricing-card {
-    background: #fff;
+    background: #1a1a33;
     padding: clamp(15px, 4vw, 20px);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform, box-shadow;
@@ -703,24 +722,26 @@ body {
 }
 
 .pricing-card.highlight {
-    border: 2px solid #4AC8F4;
+    border: 2px solid #ff0000;
     animation: glow 2s ease-in-out infinite;
 }
 
 .pricing-card h3 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: #ff0000;
 }
 
 .price {
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
-    color: #4AC8F4;
+    color: #ff0000;
     margin: clamp(8px, 2vw, 10px) 0;
 }
 
 .pricing-card ul {
     list-style: none;
     margin: clamp(15px, 4vw, 20px) 0;
+    color: #ddd;
 }
 
 .pricing-card ul li {
@@ -731,6 +752,7 @@ body {
 /* Contact Section */
 .contact-business {
     padding: clamp(40px, 10vw, 80px) 0;
+    background: linear-gradient(135deg, #0a0a1e 0%, #001a33 100%);
 }
 
 .contact-content {
@@ -748,21 +770,23 @@ body {
 .contact-info h3 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: clamp(8px, 2vw, 10px);
+    color: #ff0000;
 }
 
 .contact-info p {
     margin: clamp(8px, 2vw, 10px) 0;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: #ddd;
 }
 
 .contact-info a {
-    color: #4AC8F4;
+    color: #ff0000;
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
-    color: #007ACC;
+    color: #cc0000;
     transform: scale(1.05);
 }
 
@@ -773,17 +797,17 @@ body {
 }
 
 .social-links a {
-    color: #4AC8F4;
+    color: #ff0000;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    animation: wave 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: wave 2s infinite;
 }
 
 .social-links a:nth-child(2) { animation-delay: 0.3s; }
 .social-links a:nth-child(3) { animation-delay: 0.6s; }
 
 .social-links a:hover {
-    color: #007ACC;
+    color: #cc0000;
     animation: none;
     transform: scale(1.2);
 }
@@ -791,13 +815,16 @@ body {
 .contact-form h3 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     margin-bottom: clamp(8px, 2vw, 10px);
+    color: #ff0000;
 }
 
 .contact-form input, .contact-form textarea {
     width: 100%;
     padding: clamp(8px, 2vw, 10px);
     margin: clamp(8px, 2vw, 10px) 0;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
+    background: #1a1a33;
+    color: #fff;
     border-radius: 5px;
     font-size: clamp(0.8rem, 2.5vw, 1rem);
     animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -809,21 +836,31 @@ body {
 
 .contact-form button {
     width: 100%;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: pulse 2s infinite;
+    background: #ff0000;
+    color: #fff;
+    border: none;
 }
 
 .contact-form button:hover {
     animation: none;
     transform: scale(1.05);
+    background: #cc0000;
 }
 
 /* Footer */
 .footer-business {
     padding: clamp(15px, 4vw, 20px) 0;
-    background: #333;
+    background: #001a33;
     color: #fff;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
+}
+
+.team-mention {
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    color: #ff0000;
+    margin-bottom: 10px;
 }
 
 .footer-links {
@@ -839,7 +876,7 @@ body {
     text-decoration: none;
     font-size: clamp(0.7rem, 2vw, 0.9rem);
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    animation: wave 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: wave 2s infinite;
 }
 
 .footer-links a:nth-child(2) { animation-delay: 0.3s; }
@@ -849,7 +886,7 @@ body {
 .footer-links a:nth-child(6) { animation-delay: 1.5s; }
 
 .footer-links a:hover {
-    color: #4AC8F4;
+    color: #ff0000;
     animation: none;
     transform: scale(1.1);
 }
@@ -945,9 +982,9 @@ body {
         top: 100%;
         left: 0;
         width: 100%;
-        background: #fff;
+        background: #0a0a1e;
         padding: clamp(15px, 4vw, 20px);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         z-index: 999;
         animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -962,6 +999,11 @@ body {
 
     .nav-cta {
         display: none;
+    }
+
+    .ascii-art {
+        font-size: 0.6rem;
+        padding: 10px;
     }
 }
 
