@@ -90,3 +90,50 @@ window.addEventListener('resize', () => {
         navMenu.classList.remove('active');
     }
 });
+
+// Matrix Rain Moving Element (Kali Wallpaper Simulation)
+const canvas = document.createElement('canvas');
+canvas.style.position = 'absolute';
+canvas.style.top = '0';
+canvas.style.left = '0';
+canvas.style.pointerEvents = 'none';
+canvas.style.zIndex = ' -1';
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext('2d');
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const fontSize = 10;
+const columns = canvas.width / fontSize;
+const drops = [];
+
+for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+}
+
+function draw() {
+    ctx.fillStyle = 'rgba(10, 10, 30, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#ff0000'; // Red Kali accent
+    ctx.font = fontSize + 'px monospace';
+    
+    for (let i = 0; i < drops.length; i++) {
+        const text = Math.random() > 0.975 ? 'KALI' : String.fromCharCode(0x30A0 + Math.random() * 96);
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+        }
+        
+        drops[i]++;
+    }
+}
+
+setInterval(draw, 33);
+
+window.addEventListener('resize', () => {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+});
