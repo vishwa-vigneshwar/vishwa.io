@@ -39,9 +39,9 @@ function scrollTo(sectionId) {
 
 // Typing Effect
 const texts = [
-    'Transform Your Business with Vishwa Creations',
-    'Crafting Digital Success in Tamil Nadu & Beyond',
-    'Web Development, UI/UX, Apps by Vigneshwar S'
+    'Unleash Cyber Power with Vishwa Creations',
+    'Hacking Success in Tamil Nadu & Beyond',
+    'Web Exploits, UI Traps, Mobile Payloads'
 ];
 let index = 0;
 let charIndex = 0;
@@ -91,49 +91,71 @@ window.addEventListener('resize', () => {
     }
 });
 
-// Matrix Rain Moving Element (Kali Wallpaper Simulation)
+// Matrix Rain (Kali Wallpaper Simulation)
 const canvas = document.createElement('canvas');
+canvas.className = 'matrix-rain';
 canvas.style.position = 'absolute';
 canvas.style.top = '0';
 canvas.style.left = '0';
 canvas.style.pointerEvents = 'none';
-canvas.style.zIndex = ' -1';
-document.body.appendChild(canvas);
+canvas.style.zIndex = '1';
+document.querySelector('.hero-business').appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-const fontSize = 10;
+const fontSize = 14;
 const columns = canvas.width / fontSize;
 const drops = [];
 
 for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
+    drops[x] = Math.random() * canvas.height / fontSize;
 }
 
 function draw() {
-    ctx.fillStyle = 'rgba(10, 10, 30, 0.05)';
+    ctx.fillStyle = 'rgba(10, 10, 30, 0.1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    ctx.fillStyle = '#ff0000'; // Red Kali accent
-    ctx.font = fontSize + 'px monospace';
-    
+
+    ctx.fillStyle = '#ff0000';
+    ctx.font = fontSize + 'px VT323';
+    ctx.textAlign = 'center';
+
     for (let i = 0; i < drops.length; i++) {
-        const text = Math.random() > 0.975 ? 'KALI' : String.fromCharCode(0x30A0 + Math.random() * 96);
+        const text = Math.random() > 0.95 ? ['KALI', 'MSF', 'LOOT', 'RAT'][Math.floor(Math.random() * 4)] : String.fromCharCode(0x30A0 + Math.random() * 96);
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        
+
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0;
         }
-        
-        drops[i]++;
+        drops[i] += 0.5 + Math.random() * 0.5;
     }
 }
 
-setInterval(draw, 33);
+function animate() {
+    requestAnimationFrame(animate);
+    draw();
+}
+animate();
 
 window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+    const columns = canvas.width / fontSize;
+    drops.length = columns;
+    for (let x = 0; x < columns; x++) {
+        drops[x] = Math.random() * canvas.height / fontSize;
+    }
 });
+
+// Console Art (Kali-inspired)
+console.log(`
+  ██████╗  █████╗ ██████╗     ██████╗  █████╗ ███╗   ██╗███████╗
+  ██╔══██╗██╔══██╗██╔══██╗    ██╔══██╗██╔══██╗████╗  ██║██╔════╝
+  ██████╔╝███████║██████╔╝    ██████╔╝███████║██╔██╗ ██║███████╗
+  ██╔═══╝ ██╔══██║██╔══██╗    ██╔══██╗██╔══██║██║╚██╗██║╚════██║
+  ██║     ██║  ██║██║  ██║    ██████╔╝██║  ██║██║ ╚████║███████║
+  ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝
+  Vishwa Creations - Cyber Elite 2025
+  Time: 12:34 AM IST, October 07, 2025
+`);
